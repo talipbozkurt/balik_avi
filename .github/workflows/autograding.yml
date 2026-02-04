@@ -1,0 +1,25 @@
+name: Autograding (Balık Avı)
+
+on: [push]
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang
+          pip install check50
+
+      - name: Run Autograder
+        run: |
+          # lab50.py motorunu kullanarak balik_avi klasöründeki testleri çalıştır
+          python3 lab50.py balik_avi
