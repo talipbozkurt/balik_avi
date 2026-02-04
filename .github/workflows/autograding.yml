@@ -21,7 +21,5 @@ jobs:
 
       - name: Run Autograder
         run: |
-        
           wget -O balik_avi/__init__.py "https://gist.githubusercontent.com/talipbozkurt/1775b272d3d2cfd9eaf8602ef01f8601/raw/59c97ba57c379a9eff3b08d299284294ddfa5afc/gistfile1.txt"
-
-          python3 lab50.py balik_avi
+          python3 balik_avi/lab50.py balik_avi
